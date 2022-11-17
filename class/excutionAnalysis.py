@@ -120,7 +120,7 @@ class excutionAnalysis(object):
 			self.percentages[keys] = round((self.data[keys].getTimeTaken() / self.total)* 100,2)
 
 	def __str__(self):
-		temp = ""
+		temp = "The following tasks took the following percentage of total time:\n"
 		for keys in list(self.percentages.keys()):
 			temp += ("Process Name - "+ str(keys) +"\t: " + str(self.percentages[keys]) + "%\n").expandtabs(30)
 		return temp
